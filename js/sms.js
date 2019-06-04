@@ -52,18 +52,19 @@ function validateEmail(email) {
 
 
 
-    if(!Cookies.get("ifsmscodewasused")){
-      Cookies.set("ifsmscodewasused", true, { expires: 1 });
-    }else{
-      $("#second_try").show()
-      $("#sbmtbtn").hide()
-    }
+    // if(!Cookies.get("ifsmscodewasused")){
+    //   Cookies.set("ifsmscodewasused", true, { expires: 1 });
+    // }else{
+    //   $("#second_try").show()
+    //   $("#sbmtbtn").hide()
+    // }
 
     $("#sbmtbtn").on("click", function(e) {
       e.preventDefault();
       if (validate()) {
         callPopup();
         formsMoving()
+        getAllData()
       } else {
         $("#contactNum, #Email").addClass("make_it_red");
       }
@@ -80,10 +81,23 @@ function validateEmail(email) {
 
   });
 
-
-  
   var interval;
   window.aboutPopup = false;
+  var counrtyCode= "+995";
+
+
+  function getAllData() {
+    var Full_name = $('#Full_name').val()
+    var Email = $('#Email').val()
+    var Phone_number = $('#Phone_number').val()
+    var code = Phone_number.substring(0,3)
+    console.log(code)
+    if(code == Number(counrtyCode) ){
+      console.log(Phone_number)
+    }else{
+      console.log(counrtyCode+Phone_number)
+    }
+  }
 
   function callPopup() {
     if (window.aboutPopup == false) {      
@@ -265,9 +279,7 @@ function validateEmail(email) {
       $(".sms_popup").show()
     }else{
       $(".inputs").show()
-
     }
-
   })
 
 

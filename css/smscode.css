@@ -93,6 +93,27 @@ body{
     transition: all 0.2s !important;
     -webkit-appearance: none !important;
 }
+.sms_inputs1{
+    border-radius:  2rem 0rem 0rem 2rem !important;
+    width: 70px !important;
+}
+
+.sms_inputs2{
+    margin-bottom: 30px !important;
+    -webkit-box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+    padding-bottom: 0rem !important;
+    padding-left: .75rem !important;
+    border: 1px solid #f9f9fc !important;
+    border-radius: 0rem 2rem 2rem 0rem!important;
+    background-color: #f9f9fc !important;
+    color: #000000 !important;
+    font: 400 0.9375rem/1.75rem "Open Sans", sans-serif !important;
+    transition: all 0.2s !important;
+    -webkit-appearance: none !important;
+}
+
 .sms_popup_input{
     display: flex;
     align-items: flex-end;

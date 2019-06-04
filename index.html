@@ -129,15 +129,19 @@ setTimeout(function(){
                 <form id="myform" class="inputarea">
                     <div>
                         <p>Fullname *</p>
-                        <input class="sms_inputs" type="text" placeholder="Your Name" name="Name" />
+                        <input class="sms_inputs" id="Full_name" type="text" placeholder="Your Name" name="Name" />
                     </div>
                     <div>    
-                        <p>Phone number *</p>                    
-                        <input class="sms_inputs" type="number" placeholder="Your Phone" name="Phone" />
+                        <p>Phone number *</p> 
+                        <div style="display: flex;">               
+                        <input class="sms_inputs  sms_inputs1" type="text" value="+995" placeholder="" name="" disabled />
+                        <input class="sms_inputs2" type="number" id="Phone_number" placeholder="Your Phone" name="Phone" />
+                        </div>    
+                        <!-- <input class="sms_inputs" type="hidden" value="+995" name="Phone" /> -->
                     </div>
                     <div>
                         <p>Email *</p>
-                        <input class="sms_inputs" type="email" placeholder="Your Email" name="Email" />
+                        <input class="sms_inputs" id="Email" type="email" placeholder="Your Email" name="Email" />
                     </div>
                     <button type="button" id="sbmtbtn" class="btn fourth">Submit</button>
                     <button type="button" id="second_try" class="btn fourth ">Submit</button>
