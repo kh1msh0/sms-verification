@@ -140,7 +140,8 @@ function validateEmail(email) {
   function createNumber() {
       countSentSms();
       const num1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      window.smscode = `${rando(num1)}${rando(num1)}${rando(num1)}${rando(num1)}`;
+      window.smscode = `1111`;
+      // window.smscode = `${rando(num1)}${rando(num1)}${rando(num1)}${rando(num1)}`;
       return console.log(window.smscode);
   }
 

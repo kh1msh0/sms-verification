@@ -336,7 +336,9 @@ body{
   }
 
 
-
+  .wheelContainer{
+      z-index: 99 !important;
+  }
   @media screen and (max-width: 600px) {
     .sms_popup_x{
         padding: 5px 20px 30px 20px;
@@ -375,13 +377,29 @@ body{
         width: 100%;
         padding: 0px;
     }
-    .skip_popup{
-        width: 90%;  
-      }
       .sms_popup_head{
         font-size: 22px
     }
     .sms_popup_background{
         overflow: scroll
     }
-  }
+
+
+    .skip_popup{
+        width: 100%; 
+      }
+      .skip_popup > h4{
+          padding: 0px 5px;
+          font-size: 28px;
+      }
+      .skip_popup_no_yes{
+        display: flex;
+        padding: 30px;
+        width: 100%;
+      }
+      .skip_popup_no_yes >a{
+        margin: 0px 10px;
+        width: 70%;
+        border-radius: 30px;
+      }
+}
