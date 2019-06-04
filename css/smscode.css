@@ -368,7 +368,7 @@ body{
     .sms_verivication_text > h1{
       font-weight: 500;
       font-size: 30px;
-      margin-top: 0px;
+      margin-top: 50px;
     }
     .sms_popup{
         color: white;
@@ -378,4 +378,10 @@ body{
     .skip_popup{
         width: 90%;  
       }
+      .sms_popup_head{
+        font-size: 22px
+    }
+    .sms_popup_background{
+        overflow: scroll
+    }
   }
