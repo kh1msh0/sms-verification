@@ -383,12 +383,13 @@ body{
         text-align: left;
         color: #fff;
         padding: 10px;
+        /* top:5%; */
     }
   
     .sms_verivication_text > h1{
       font-weight: 500;
       font-size: 30px;
-      margin-top: 50px;
+      /* margin-top: 50px; */
     }
     .sms_popup{
         color: white;

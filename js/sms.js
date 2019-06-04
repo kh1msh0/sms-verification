@@ -36,12 +36,8 @@ function validateEmail(email) {
   };
 
 
-  $(document).ready(function() {
-    // if(!Cookies.get("ifsmscodewasused")){
-    //   Cookies.set("ifsmscodewasused", true, { expires: 1 });
-    // }else{
-    //   $(".sms_popup_background").hide();
-    // }
+  $(document).ready(function() {    
+    $("#second_try").hide()
     $(".skip_popup_background").hide()
     $(".skip_popup").hide()
     $(".sms_popup_change_number").hide()
@@ -55,6 +51,14 @@ function validateEmail(email) {
     $(".success").hide();
 
 
+
+    if(!Cookies.get("ifsmscodewasused")){
+      Cookies.set("ifsmscodewasused", true, { expires: 1 });
+    }else{
+      $("#second_try").show()
+      $("#sbmtbtn").hide()
+    }
+
     $("#sbmtbtn").on("click", function(e) {
       e.preventDefault();
       if (validate()) {
@@ -64,6 +68,16 @@ function validateEmail(email) {
         $("#contactNum, #Email").addClass("make_it_red");
       }
     });
+
+
+    $("#second_try").click(function(){
+      if (validate()){
+        $('.inputs').hide()
+        closeSmsVerification()
+      }
+    })
+
+
   });
 
 
@@ -140,8 +154,8 @@ function validateEmail(email) {
   function createNumber() {
       countSentSms();
       const num1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      window.smscode = `1111`;
-      // window.smscode = `${rando(num1)}${rando(num1)}${rando(num1)}${rando(num1)}`;
+      // window.smscode = `1111`;
+      window.smscode = `${rando(num1)}${rando(num1)}${rando(num1)}${rando(num1)}`;
       return console.log(window.smscode);
   }
 
